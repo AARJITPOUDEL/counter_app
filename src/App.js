@@ -1,25 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import React, {useState}from "react";
+import './style.css'
+const App = ()=>{
+const [number, setNumber]= useState(0)
+    return <div>
+        <h3>Counter App</h3>
+        <h4>{number}</h4>
+    <button onClick={()=> setNumber(number+1) } className="button">Add</button>
+    <button onClick={()=> setNumber(number-1)} className="button">Decrease</button>
+    <button onClick={()=> setNumber(0)} className="button">Reset</button>
     </div>
-  );
 }
-
 export default App;
